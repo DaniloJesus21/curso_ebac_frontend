@@ -1,0 +1,325 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container,
+nav{
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  padding: 16px 0 0;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  margin-bottom: 56px;
+  background: rgb(1, 51, 255);
+  color: white;
+}
+
+
+h1{
+  font-size: 2em;
+}
+
+.menu > li {
+  float: left;
+  list-style: none;
+  padding: 5px 16px 16px;
+  border-top: 4px solid transparent;
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.menu li:hover{
+  border-color: rgb(255, 255, 255);
+}
+
+.menu li:hover .submenu{
+  display: block;
+}
+
+.botao-menu{
+  display: none;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  width: 200px;
+  left: 0;
+  top: 100%;
+  border: 1px solid rgb(174, 174, 174);
+  background-color: white;
+}
+
+.clear {
+  clear: both;
+}
+
+.submenu li {
+  display: block;
+  padding: 8px;
+}
+
+.submenu li:hover {
+  opacity: 0.8;
+}
+
+/* Main */
+.loja {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin-bottom: 40px;
+}
+
+h2{
+  font-size: 32px;
+  margin-bottom: 32px;
+  color: blue;
+  border-bottom: 4px solid blue;
+}
+
+.produtos {
+  display: flex;
+  flex-direction: column;
+}
+
+.produtos h2{
+  font-size: 36px;
+}
+
+article {
+  width: 100%;
+  cursor: pointer;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+article:hover {
+  border: 1px solid rgb(3, 53, 145);
+}
+
+article button{
+  width: 100%;
+  background: rgb(3, 53, 145);
+  color: white;
+  font-weight: 800;
+  border-radius: 4px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+article button:hover {
+  background: rgb(1, 1, 70);
+}
+
+article img {
+  max-width: 100%;
+}
+
+.catalogo h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.catalogo > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 16px;
+}
+
+h4 {
+  font-size: 17px;
+}
+
+p {
+  font-size: 32px;
+  color: rgb(250, 5, 5);
+  margin: 8px 0;
+}
+
+span{
+  font-size: 24px;
+  text-decoration: line-through;
+}
+
+.contato form{
+  display: block;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: space-between;
+}
+
+form input,
+form textarea,
+form button {
+  display: block;
+  width: 320px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+form textarea {
+  resize: none;
+  height: 180px;
+}
+
+form button {
+  background-color:rgb(3, 53, 145) ;
+  color:#ecf0f1;
+  border:none;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: rgb(3, 53, 145);
+}
+
+input:focus, textarea:focus {
+  outline-color: rgb(3, 53, 145);
+}
+
+footer {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 10px;
+  background: rgb(3, 53, 145);
+  margin-bottom: 32px;
+}
+
+.footer-container p {
+  font-size: 13px;
+  text-align: center;
+  color: white;
+}
+
+footer small {
+  font-size: 80%;
+  display: block;
+}
+
+/* Media Query */
+@media (min-width: 1024px){
+  .botao-menu{
+    display: none;
+  }
+}
+
+@media (min-width: 641px) and (max-width:1023px){
+  .container,
+  nav{
+    max-width: 90%;    
+  }
+  .loja{
+    display: block;
+  }
+  .loja img {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .submenu {
+    width: 100%;
+  }
+  .catalogo > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    margin-bottom: 16px;
+  }
+}
+
+
+@media (max-width: 640px) {
+
+  .nav {
+    max-width: 90%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .botao-menu{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    padding-bottom: 16px;
+  }
+  .botao-menu button{
+    padding: 8px;
+  }
+
+  .menu > li {
+    clear: both;
+  }
+  .menu li:hover .submenu{
+    display: block;
+  } 
+  .submenu {
+    display: none;
+    position: relative;
+    width: 100%;
+    border: none;
+  }
+  .submenu li {
+    display: block;
+    padding: 8px;
+    margin-top: 8px;
+  }
+
+  .container,
+  nav{
+    max-width: 90%;    
+  }
+
+  .loja{
+    display: block;
+  }
+  .loja img {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .catalogo > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 16px;
+  }
+  article {
+    width: 100%;
+  }
+  
+  article button{
+    width: 100%;
+    background: rgb(3, 53, 145);
+    color: white;
+    font-weight: 800;
+    border-radius: 4px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    transition: .2s ease;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    display: block;
+    width: 500px;
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+}
